@@ -1,153 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karousos</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #e6f2ff;
-      color: #003366;
-      margin: 0;
-      padding: 0;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karousos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f2ff;
+      color: #003366;
+      margin: 0;
+      padding: 0;
+    }
 
-    header {
-      background-color: #007bff;
-      color: white;
-      padding: 15px 20px;
-      text-align: center;
-    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
 
-    .container {
-      padding: 20px;
-      box-sizing: border-box;
-    }
+    .container {
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-    .page {
-      display: none;
-    }
+    .page {
+      display: none;
+    }
 
-    .active {
-      display: block;
-    }
+    .active {
+      display: block;
+    }
 
-    label {
-      display: block;
-      margin: 10px 0 5px;
-    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #007bff;
-      border-radius: 5px;
-      margin-bottom: 15px;
-      box-sizing: border-box;
-    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #007bff;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
 
-    button {
-      background-color: #007bff;
-      color: white;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 5px 5px 10px 0;
-    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px 5px 10px 0;
+    }
 
-    button:hover {
-      background-color: #0056b3;
-    }
+    button:hover {
+      background-color: #0056b3;
+    }
 
-    .table-wrapper {
-      overflow-x: auto;
-      margin-top: 20px;
-    }
+    .table-wrapper {
+      overflow-x: auto;
+      margin-top: 20px;
+    }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 600px;
-    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
 
-    th, td {
-      border: 1px solid #007bff;
-      padding: 12px;
-      font-size: 16px;
-    }
+    th, td {
+      border: 1px solid #007bff;
+      padding: 12px;
+      font-size: 16px;
+    }
 
-    th {
-      background-color: #cce5ff;
-    }
+    th {
+      background-color: #cce5ff;
+    }
 
-    .nav {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+    .nav {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 24px;
-      }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 24px;
+      }
 
-      h2 {
-        font-size: 20px;
-      }
+      h2 {
+        font-size: 20px;
+      }
 
-      th, td {
-        font-size: 14px;
-        padding: 10px;
-      }
+      th, td {
+        font-size: 14px;
+        padding: 10px;
+      }
 
-      input, textarea {
-        font-size: 14px;
-      }
+      input, textarea {
+        font-size: 14px;
+      }
 
-      button {
-        font-size: 14px;
-        padding: 8px 12px;
-      }
+      button {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
 
-      .container {
-        padding: 10px;
-      }
-    }
-  </style>
+      .container {
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <h1>KAROUSOS</h1>
-  </header>
+  <header>
+    <h1>KAROUSOS</h1>
+  </header>
 
-  <div class="container">
+  <div class="container">
 
-    <!-- FORM PAGE -->
-    <div id="form-page" class="page active">
-      <h2>Καινούρια παραλαβή</h2>
-      <form id="ingredient-form">
-        <label for="item">Προϊόν</label>
-        <input type="text" id="item" required>
+    <!-- FORM PAGE -->
+    <div id="form-page" class="page active">
+      <h2>Καινούρια παραλαβή</h2>
+      <form id="ingredient-form">
+        <label for="item">Προϊόν</label>
+        <input type="text" id="item" required>
 
-        <label for="origin">Κωδικός</label>
-        <input type="text" id="origin" required>
+        <label for="origin">Κωδικός</label>
+        <input type="text" id="origin" required>
 
-        <label for="date">Ημερομηνία παραλαβής</label>
-        <input type="date" id="date" required>
+        <label for="date">Ημερομηνία παραλαβής</label>
+        <input type="date" id="date" required>
 
-        <label for="notes">Άλλες Πληροφορίες</label>
-        <textarea id="notes" rows="3"></textarea>
+        <label for="notes">Άλλες Πληροφορίες</label>
+        <textarea id="notes" rows="3"></textarea>
 
-        <button type="submit">Πρόσθεση παραλαβής</button>
-      </form>
-      <div class="nav">
-        <button onclick="goToPage('table-page')">Παραλαβές</button>
-      </div>
-    </div>
+        <button type="submit">Πρόσθεση παραλαβής</button>
+      </form>
+      <div class="nav">
+        <button onclick="goToPage('table-page')">Παραλαβές</button>
+      </div>
+    </div>
 
-    <!-- TABLE PAGE -->
-    <div id="table-page"
+    <!-- TABLE PAGE -->
+    <div id="table-page" class="page">
+      <h2>Όλες οι παραλαβές</h2>
+      <div class="table-wrapper">
+        <table id="receipts-table">
+          <thead>
+            <tr>
+              <th>Προϊόν</th>
+              <th>Κωδικός</th>
+              <th>Ημερομηνία</th>
+              <th>Σχόλια</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Entries will be added here -->
+          </tbody>
+        </table>
+      </div>
+      <div class="nav">
+        <button onclick="goToPage('form-page')">Πίσω στη φόρμα</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function goToPag
+    
